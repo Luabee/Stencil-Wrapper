@@ -44,34 +44,34 @@ function render.GetStencilCompareFunction()
 	return CompareFunc
 end
 
-local TestMask = 3
+local Test = 3
 local oldFunc5 = render.SetStencilTestMask
 function render.SetStencilTestMask(a)
 	oldFunc5(a)
-	TestMask = a
+	Test = a
 end
 function render.GetStencilTestMask()
-	return TestMask
+	return Test
 end
 
-local WriteMask = 3
+local Write = 3
 local oldFunc6 = render.SetStencilWriteMask
 function render.SetStencilWriteMask(a)
 	oldFunc6(a)
-	WriteMask = a
+	Write = a
 end
 function render.GetStencilWriteMask()
-	return WriteMask
+	return Write
 end
 
-local Enable = false
+local Enabled = false
 local oldFunc7 = render.SetStencilEnable
 function render.SetStencilEnable(a)
 	oldFunc7(a)
-	Enable = a
+	Enabled = a
 end
 function render.GetStencilEnable()
-	return Enable
+	return Enabled
 end
 
 local ReferenceValue = 0
@@ -147,7 +147,7 @@ end
 
 //Comparison Function:
 function Compare(f)
-	r.SetStencilComparisonFunction(f)
+	r.SetStencilCompareFunction(f)
 end
 
 //Reference Value:
